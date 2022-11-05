@@ -49,11 +49,49 @@
     /* height: 100px; */
     /* height: auto; */
 }
+.hero__section_title{
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.hero__section_input_container{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.input_container_location, .input_container_search{
+padding: 6px;
+border: none;
+border-radius: 15px;
+width: 96%;
+outline: none;
+}
+
+.input_container_location{
+    width: 35%;
+    border-right: 2px solid gray;
+}
+
+.input_container_search{
+    width: 65%;
+}
 
 
 
 
 
+
+
+
+
+/* Media */
 @media only screen and (max-width:500px){
     .navbar__menu_container .user__icon{
         display: flex;
@@ -67,4 +105,72 @@
     .navbar{
         padding: 16px;
     }
+    .hero__section_input_container{
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
+    }
+    .input_container_location, .input_container_search{
+        padding: 15px;
+        flex-direction: column;
+        border-radius: 10px;
+        width: 95%;
+    }
+    .hero__section_input_container{
+        height: calc(80vh - 60px);
+    }
+    .hero__section_title{
+        font-size: 20px;
+        width: 95%;
+    }
 } 
+/* .container{
+    margin: 3rem auto;
+    width: 90%;
+    } */
+
+.container__we_offer{
+margin: 3rem auto;
+width: 90%;
+display: flex;
+flex-wrap: wrap;
+gap: 1.5rem;
+align-items: center;
+justify-content: center;
+}
+
+.we__offer_card{
+   border-radius: 10px; 
+   /* background-color: aqua; */
+   overflow: hidden;
+   border: 1px solid gray;
+   /* Animations not working */
+   transition: all 0.4s ease;
+}
+
+.we__offer_card:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.we__offer_card img{
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.we__offer_content{
+    padding: 10px;
+    
+}
+.we__offer_content h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+.we__offer_content p{
+    font-size: 12px;
+    
+}
+
+
